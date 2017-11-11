@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GoogleSigninComponent } from './google-signin/google-signin.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GoogleSigninComponent
   ],
   imports: [
     BrowserModule
