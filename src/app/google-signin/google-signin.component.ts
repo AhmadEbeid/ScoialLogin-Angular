@@ -36,11 +36,9 @@ export class GoogleSigninComponent implements AfterViewInit {
       this.auth2.attachClickHandler(element, {},
         (googleUser) => {
           let profile = googleUser.getBasicProfile();
-          console.log('Token || ' + googleUser.getAuthResponse().id_token);
-          console.log('ID: ' + profile.getId());
-          console.log('Name: ' + profile.getName());
-          console.log('Image URL: ' + profile.getImageUrl() + '?sz=600');
-          console.log('Email: ' + profile.getEmail());
+          let profileJson = {"ID": profile.getId(), "Name": profile.getName(), 
+          "Image URL": profile.getImageUrl() + '?sz=600', "Email": profile.getEmail()};
+          console.log(profileJson);
           
         }, function (error) {
           console.log(JSON.stringify(error, undefined, 2));
